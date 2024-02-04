@@ -1,0 +1,1087 @@
+"id": "seed_task_31",
+"name": "complete_python_code",
+ 
+	
+//(1)
+"instruction": "نام کلاس باید با نام فایل مطابقت داشته باشد، برای کد جاوا زیر یک تکمیل پیشنهاد دهید.",
+"instances":
+[{"input":
+public class HelloWorld {
+public static void main(String[] args) {
+"output":
+public class HelloWorld {
+public static void main(String[] args) {
+System.out.println("Hello, world!"); // This is a statement that ends with a semicolon}} }]
+
+
+//(2)
+"instruction": "یک روش با کلمه کلیدی def تعریف شده است. پیشنهاد یک تکمیل برای کد روبی زیر.",
+"instances":
+[{"input":def factorial(n)
+  if n < 0
+    return "Invalid input"
+"output":def factorial(n)
+  if n < 0
+    return "Invalid input"
+  elsif n == 0
+    return 1
+  else
+    return n * factorial(n - 1)
+  end
+end
+puts factorial(5) # This prints 120}]
+
+ //(3)
+"instruction": "یک آرایه با براکت های مربع ایجاد می شود و با کاما یک تکمیل کد جاوا اسکریپت زیر را پیشنهاد دهید.",
+"instances":
+[{"input":var books = [
+  {title: "The Hitchhiker's Guide to the Galaxy", author: "Douglas Adams", genre: "Science Fiction"},
+  {title:
+"output"var books = [
+  {title: "The Hitchhiker's Guide to the Galaxy", author: "Douglas Adams", genre: "Science Fiction"},
+  {title: "The Lord of the Rings", author: "J.R.R. Tolkien", genre: "Fantasy"},
+  {title: "Nineteen Eighty-Four", author: "George Orwell", genre: "Dystopian"},
+  {title: "The Catcher in the Rye", author: "J.D. Salinger", genre: "Coming-of-Age"},
+  {title: "The Da Vinci Code", author: "Dan Brown", genre: "Thriller"}
+];:}]
+
+
+  //(4)
+"instruction": "A list is created with the List class and the type of elementsSuggest a completion for the following C# code.",
+"instances":
+[{"input":List<int> numbers = new List<int>();
+numbers.Add(5);
+numbers.Add(2);
+numbers.Add(9);
+numbers.Add(1);
+numbers.Sort();
+"output":List<int> numbers = new List<int>();
+numbers.Add(5);
+numbers.Add(2);
+numbers.Add(9);
+numbers.Add(1);
+numbers.Sort();
+foreach (int number in numbers)
+{
+  Console.WriteLine(number); // This prints 1, 2, 5, 9
+}}]
+
+
+
+
+ //(5)
+"instruction": "Variables are created with the $ signSuggest a completion for the following PHP  code.",
+"instances":
+[{"input":$connection = mysqli_connect("localhost", "username", "password", "database");
+$result = mysqli_query($connection, "SELECT * FROM table");
+"output":
+$connection = mysqli_connect("localhost", "username", "password", "database");
+$result = mysqli_query($connection, "SELECT * FROM table");
+while ($row = mysqli_fetch_assoc($result))
+{
+  echo $row["column"] . "\n"; // This prints the value of the column for each row
+}
+mysqli_close($connection);}]
+
+
+//(6)
+"instruction": "A function is defined with the function keyword and parametersSuggest a completion for the following JavaScript code.",
+"instances":
+[{"input":function isPrime(n) {
+  if (n < 2) {
+    return false;
+  } else if (n == 2) {
+    return true;
+  }
+"output":function isPrime(n) {
+  if (n < 2) {
+    return false;
+  } else if (n == 2) {
+    return true;
+  } else {
+    for (var i = 2; i < Math.sqrt(n); i++) {
+      if (n % i == 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+console.log(isPrime(17));}]
+
+
+//  (7)
+"instruction": "A module is defined with the module keyword and the nameSuggest a completion for the following Ruby code.",
+"instances":
+[{"input":module Greeting
+  MESSAGE = "Hello"
+"output":module Greeting
+  MESSAGE = "Hello"
+  def greet(name)
+    puts "#{MESSAGE}, #{name}!" # This prints Hello, name!
+  end
+end
+class Person
+  include Greeting
+
+  def initialize(name)
+    @name = name
+  end
+  attr_reader :name
+end
+me and parentheses
+p = Person.new("Bob")
+p.greet(p.name) }]
+
+
+//  (8)
+"instruction": "A class is defined with the class keyword and the nameSuggest a completion for the following C# code.",
+"instances":
+[{"input":class Mammal
+{
+  public Mammal(string name)
+  {
+    this.Name = name;
+  }
+  public string Name { get; set; }
+  public void Breathe()
+  {
+    Console.WriteLine(this.Name + " is breathing.");
+  }
+}
+"output":class Mammal
+{
+  public Mammal(string name)
+  {
+    this.Name = name;
+  }
+  public string Name { get; set; }
+  public void Breathe()
+  {
+    Console.WriteLine(this.Name + " is breathing.");
+  }
+}
+class Person : Mammal
+{
+  public Person(string name, int age) : base(name)
+  {
+    this.Age = age;
+  }
+  public int Age { get; set; }
+  public override void Breathe()
+  {
+    base.Breathe();
+    Console.WriteLine(this.Name + " is " + this.Age + " years old.");
+  }
+}
+Mammal m = new Mammal("Lion");
+m.Breathe();
+Person p = new Person("Alice", 25);
+p.Breathe();}]
+
+
+//  (9)
+"instruction": "A function is defined with the function keyword and parametersSuggest a completion for the following PHP code.",
+"instances":
+[{"input":function fibonacci($n)
+{
+  $sequence = array(0, 1);
+  while (true)
+  {
+"output":function fibonacci($n)
+{
+  $sequence = array(0, 1);
+  while (true)
+  {
+    $last = end($sequence);
+    $second_last = prev($sequence);
+    $next = $last + $second_last;
+    // A break statement exits the loop
+    if ($next > $n) break;
+    array_push($sequence, $next);
+  }
+  return $sequence;
+}
+print_r(fibonacci(100));}]
+
+
+//  (10)
+"instruction": " This is a program that implements a binary search algorithm to find an element in a sorted array.Suggest a completion for the following c++ code.",
+"instances":
+[{"input":#include <iostream>
+int binarySearch(int arr[], int low, int high, int target) {
+  if (low > high) {
+    return -1;
+  }
+  int mid = (low + high) / 2;
+  if (target == arr[mid]) {
+    return mid; // Found the target
+  } else if (target < arr[mid]) {
+    return binarySearch(arr, low, mid - 1, target); // Search in the left half
+  } else {
+    return binarySearch(arr, mid + 1, high, target); // Search in the right half
+  }
+}
+"output":#include <iostream>
+int binarySearch(int arr[], int low, int high, int target) {
+  if (low > high) {
+    return -1;
+  }
+  int mid = (low + high) / 2;
+  if (target == arr[mid]) {
+    return mid; // Found the target
+  } else if (target < arr[mid]) {
+    return binarySearch(arr, low, mid - 1, target); // Search in the left half
+  } else {
+    return binarySearch(arr, mid + 1, high, target); // Search in the right half
+  }
+}
+int main() {
+  int arr[] = {2, 5, 8, 12, 16, 23, 38, 56, 72, 91};
+  int n = sizeof(arr) / sizeof(arr[0]);
+  int target = 23;
+  int result = binarySearch(arr, 0, n - 1, target);
+  if (result == -1) {
+    std::cout << "Element not found in the array\n";
+  } else {
+    std::cout << "Element found at index " << result << "\n";
+  }
+  return 0;
+}}]
+
+
+//  (11)
+"instruction": "This is a query that joins two tables (customers and orders) and returns the total amount spent by each customerSuggest a completion for the following SQL code.",
+"instances":
+[{"input":-- Create a sample customers table
+CREATE TABLE customers (
+  customer_id INT PRIMARY KEY,
+  customer_name VARCHAR(50) NOT NULL
+);
+INSERT INTO customers (customer_id, customer_name) VALUES
+(1, 'Alice'),
+(2, 'Bob'),
+(3, 'Charlie');
+CREATE TABLE orders (
+  order_id INT PRIMARY KEY,
+  customer_id INT NOT NULL,
+  order_date DATE NOT NULL,
+  order_amount DECIMAL(10, 2) NOT NULL,
+  FOREIGN KEY (customer_id) REFERENCES customers (customer_id)
+);
+"output":
+CREATE TABLE customers (
+  customer_id INT PRIMARY KEY,
+  customer_name VARCHAR(50) NOT NULL
+);
+INSERT INTO customers (customer_id, customer_name) VALUES
+(1, 'Alice'),
+(2, 'Bob'),
+(3, 'Charlie');
+CREATE TABLE orders (
+  order_id INT PRIMARY KEY,
+  customer_id INT NOT NULL,
+  order_date DATE NOT NULL,
+  order_amount DECIMAL(10, 2) NOT NULL,
+  FOREIGN KEY (customer_id) REFERENCES customers (customer_id)
+);
+INSERT INTO orders (order_id, customer_id, order_date, order_amount) VALUES
+(1, 1, '2024-01-15', 100.00),
+(2, 2, '2024-01-16', 200.00),
+(3, 3, '2024-01-17', 300.00),
+(4, 1, '2024-01-18', 150.00),
+(5, 2, '2024-01-19', 250.00);
+spent by each customer
+SELECT c.customer_name, SUM(o.order_amount) AS total_amount
+FROM customers c
+JOIN orders o
+ON c.customer_id = o.customer_id
+GROUP BY c.customer_name
+ORDER BY total_amount DESC;
+}]
+
+
+
+// (12)
+"instruction": " This is a program that defines a function that reverses a list using recursion.Suggest a completion for the following  Lisp code.",
+"instances":
+[{"input":(defun reverse-list (lst)
+  (if (null lst)
+    nil
+"output":(defun reverse-list (lst)
+  (if (null lst)
+    nil
+    (append (reverse-list (cdr lst)) (list (car lst)))))}]
+
+
+//  (13)
+"instruction": " This is a program that defines a predicate that checks if a list is a palindrome.Suggest a completion for the following Prolog code.",
+"instances":
+[{"input":subroutine bubble_sort(arr, n)
+  integer, intent(inout) :: arr(n)
+  integer, intent(in) :: n
+  integer :: i, j, temp
+"output":subroutine bubble_sort(arr, n)
+  integer, intent(inout) :: arr(n)
+  integer, intent(in) :: n
+  integer :: i, j, temp
+  do i = 1, n - 1
+    do j = 1, n - i
+      if (arr(j) > arr(j+1)) then
+        temp = arr(j)
+        arr(j) = arr(j+1)
+        arr(j+1) = temp
+      end if
+    end do
+  end do
+end subroutine}]
+
+
+// (14)
+"instruction": " This is a program that defines a procedure that calculates the factorial of a positive integer.Suggest a completion for the following COBOL code.",
+"instances":
+[{"input":IDENTIFICATION DIVISION.
+PROGRAM-ID. FACTORIAL.
+DATA DIVISION.
+WORKING-STORAGE SECTIO
+"output":IDENTIFICATION DIVISION.
+PROGRAM-ID. FACTORIAL.
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01 N PIC 9(5) VALUE 5.
+01 F PIC 9(10) VALUE 1.
+01 I PIC 9(5) VALUE 1.
+PROCEDURE DIVISION.
+    PERFORM VARYING I FROM 1 BY 1 UNTIL I > N
+        COMPUTE F = F * I
+    END-PERFORM
+    DISPLAY "FACTORIAL OF " N " IS " F
+    STOP RUN.}]
+
+
+// (15)
+"instruction": " This is a program that defines a function that calculates the nth Fibonacci number using recursion.Suggest a completion for the following Scheme code.",
+"instances":
+[{"input":(define (fibonacci n)
+  (cond ((= n 0) 0)
+"output":(define (fibonacci n)
+  (cond ((= n 0) 0)
+        ((= n 1) 1)
+        (else (+ (fibonacci (- n 1)) (fibonacci (- n 2))))))}]
+
+
+// (16)
+"instruction": " This is a program that defines a function that merges two sorted lists into one sorted list.Suggest a completion for the following Erlangcode.",
+"instances": 
+[{"input":merge([], L) -> L;
+merge(L, []) -> L;
+"output":merge([], L) -> L;
+merge(L, []) -> L;
+merge([H1|T1], [H2|T2]) ->
+  if H1 =< H2 ->
+    [H1|merge(T1, [H2|T2])];
+  true ->
+    [H2|merge([H1|T1], T2)]
+  end.}]
+
+
+// (17)
+"instruction": This is a program that defines a function that checks if a string is a palindrome."Suggest a completion for the following code.",
+"instances":
+[{"input":let palindrome s =
+  let len = String.length s in
+  let rec aux i j =
+    if i >= j then true
+"output":let palindrome s =
+  let len = String.length s in
+  let rec aux i j =
+    if i >= j then true
+    else if s.[i] <> s.[j] then false
+    else aux (i + 1) (j - 1)
+  in
+  aux 0 (len - 1)}]
+
+
+//(18)
+"instruction": "This is a program that defines a function that sorts an array using quicksort.Suggest a completion for the following  Julia code.",
+"instances":
+[{"input":function quicksort(arr)
+  if length(arr) <= 1
+    return arr
+  end
+"output":function quicksort(arr)
+  if length(arr) <= 1
+    return arr
+  end
+  pivot = pop!(arr)
+  left = filter(x -> x <= pivot, arr)
+  right = filter(x -> x > pivot, arr)
+  return [quicksort(left); pivot; quicksort(right)]
+end}]
+
+
+// (19)
+"instruction": "This is a program that defines a function that returns the longest common subsequence of two strings.Suggest a completion for the following Dart code.",
+"instances":
+[{"input":String lcs(String s1, String s2) {
+  int m = s1.length;
+  int n = s2.length;
+  List<List<int>> dp = List.generate(m + 1, (_) => List.filled(n + 1, 0));
+  for (int i = 1; i <= m; i++) {
+    for (int j = 1; j <= n; j++) {
+      if (s1[i - 1] == s2[j - 1]) {
+        dp[i][j] = dp[i - 1][j - 1] + 1;
+      } else {
+        dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
+      }
+    }
+  }
+"output":String lcs(String s1, String s2) {
+  int m = s1.length;
+  int n = s2.length;
+  List<List<int>> dp = List.generate(m + 1, (_) => List.filled(n + 1, 0));
+  for (int i = 1; i <= m; i++) {
+    for (int j = 1; j <= n; j++) {
+      if (s1[i - 1] == s2[j - 1]) {
+        dp[i][j] = dp[i - 1][j - 1] + 1;
+      } else {
+        dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
+      }
+    }
+  }
+  int len = dp[m][n];
+  int i = m;
+  int j = n;
+  String res = "";
+  while (i > 0 && j > 0) {
+    if (s1[i - 1] == s2[j - 1]) {
+      res = s1[i - 1] + res;
+      i--;
+      j--;
+      len--;
+    } else if (dp[i - 1][j] > dp[i][j - 1]) {
+      i--;
+    } else {
+      j--;
+    }
+  }
+  return res;
+}}]
+
+
+// (20)
+"instruction": "This is a program that defines a function that returns the prime factors of a positive integer.Suggest a completion for the following Groovycode.",
+"instances":
+[{"input":def primeFactors(n) {
+  def factors = []
+  def d = 2
+  while (n > 1) {
+    while (n % d == 0) {
+      factors << d
+      n /= d
+    }
+"output":def primeFactors(n) {
+  def factors = []
+  def d = 2
+  while (n > 1) {
+    while (n % d == 0) {
+      factors << d
+      n /= d
+    }
+    d++
+  }
+  return factors
+}}]
+
+
+
+//  (21)
+"instruction": " This is a program that defines a function that returns the sum of the squares of the first n natural numbers,Suggest a completion for the following Clojure code.",
+"instances": 
+[{"input":(defn sum-of-squares [n]
+"output":(defn sum-of-squares [n]
+  (reduce + (map #(* % %) (range 1 (inc n)))))
+}]
+
+
+
+//  (22)
+"instruction": "Suggest a completion for the following python code.",
+"instances": 
+[{"input":
+"output":}]
+
+
+//  (23)
+"instruction": "This is a program that defines a function that returns the nth Fibonacci number using recursion.Suggest a completion for the following F# code.",
+"instances": 
+[{"input":let rec fibonacci n =
+  match n with
+"output":let rec fibonacci n =
+  match n with
+  | 0 -> 0
+  | 1 -> 1
+  | _ -> fibonacci (n - 1) + fibonacci (n - 2)
+}]
+
+
+//  (24)
+"instruction": " This is a program that defines a function that reverses a string.Suggest a completion for the following Elixir code.",
+"instances": 
+[{"input":def reverse_string(str) do
+  str
+"output":def reverse_string(str) do
+  str
+  |> String.graphemes()
+  |> Enum.reverse()
+  |> Enum.join()
+end
+}]
+
+
+//  (25)
+"instruction": "This is a program that defines a class that implements a stack data structure.Suggest a completion for the following TypeScript code.",
+"instances":
+[{"input":class Stack<T> {
+  private items: T[];
+
+  constructor() {
+    this.items = [];
+  }
+"output":class Stack<T> {
+  private items: T[];
+
+  constructor() {
+    this.items = [];
+  }
+
+  push(item: T): void {
+    this.items.push(item);
+  }
+
+  pop(): T | undefined {
+    return this.items.pop();
+  }
+
+  peek(): T | undefined {
+    return this.items[this.items.length - 1];
+  }
+
+  isEmpty(): boolean {
+    return this.items.length == 0;
+  }
+
+  size(): number {
+    return this.items.length;
+  }
+}
+}]
+
+
+//  (26)
+"instruction": "Suggest a completion for the following python code.",
+"instances":
+[{"input":
+"output":}]
+
+
+//  (27)
+"instruction": "This is a program that defines a function that checks if a number is primeSuggest a completion for the following Racket code.",
+"instances":
+[{"input":(define (prime? n)
+  (cond
+    [(<= n 1) #f]
+    [(= n 2) #t]
+    [(even? n) #f]
+    [else
+     (let loop ([i 3])
+"output":(define (prime? n)
+  (cond
+    [(<= n 1) #f]
+    [(= n 2) #t]
+    [(even? n) #f]
+    [else
+     (let loop ([i 3])
+       (cond
+         [(> (* i i) n) #t]
+         [(zero? (modulo n i)) #f]
+         [else (loop (+ i 2))]))]))
+}]
+
+
+//  (28)
+"instruction": "This is a program that defines a function that sorts an array using insertion sort.Suggest a completion for the following Crystal code.",
+"instances":
+[{"input":def insertion_sort(arr : Array(Int32))
+  (1...arr.size).each do |i|
+    key = arr[i]
+"output":def insertion_sort(arr : Array(Int32))
+  (1...arr.size).each do |i|
+    key = arr[i]
+    j = i - 1
+    while j >= 0 && arr[j] > key
+      arr[j + 1] = arr[j]
+      j -= 1
+    end
+    arr[j + 1] = key
+  end
+end
+}]
+
+
+//  (29)
+"instruction": "This is a program that defines a function that returns the longest common subsequence of two strings.Suggest a completion for the following Nim code.",
+"instances": 
+[{"input":func lcs(s1, s2: string): string =
+  var m = s1.len
+  var n = s2.len
+  var dp = newSeqWith(m + 1, newSeqint)
+  for i in 1..m:
+    for j in 1..n:
+      if s1[i - 1] == s2[j - 1]:
+        dp[i][j] = dp[i - 1][j - 1] + 1
+      else:
+"output":func lcs(s1, s2: string): string =
+  var m = s1.len
+  var n = s2.len
+  var dp = newSeqWith(m + 1, newSeqint)
+  for i in 1..m:
+    for j in 1..n:
+      if s1[i - 1] == s2[j - 1]:
+        dp[i][j] = dp[i - 1][j - 1] + 1
+      else:
+        dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+  var len = dp[m][n]
+  var i = m
+  var j = n
+  var res = ""
+  while i > 0 and j > 0:
+    if s1[i - 1] == s2[j - 1]:
+      res = s1[i - 1] & res
+      i -= 1
+      j -= 1
+      len -= 1
+    elif dp[i - 1][j] > dp[i][j - 1]:
+      i -= 1
+    else:
+      j -= 1
+  return res
+}]
+
+
+//  (30)
+"instruction": " This is a program that defines a function that returns the prime factors of a positive integer.Suggest a completion for the following D code.",
+"instances":
+[{"input":import std.array : array;
+import std.algorithm : filter;
+
+int[] primeFactors(int n) {
+  int[] factors;
+  int d = 2;
+"output":import std.array : array;
+import std.algorithm : filter;
+
+int[] primeFactors(int n) {
+  int[] factors;
+  int d = 2;
+  while (n > 1) {
+    while (n % d == 0) {
+      factors ~= d;
+      n /= d;
+    }
+    d++;
+  }
+  return factors;
+}
+}]
+
+
+
+//  (31)
+"instruction": "This is a program that defines a procedure that prints “Hello World” to the standard output.Suggest a completion for the following Ada code.",
+"instances": 
+[{"input":with Ada.Text_IO;
+procedure Hello_World is
+"output":with Ada.Text_IO;
+procedure Hello_World is
+begin
+  Ada.Text_IO.Put_Line("Hello World");
+end Hello_World;
+}]
+
+
+
+//  (32)
+"instruction": "Utilizes Java's Executor framework to demonstrate asynchronous execution with a thread pool and a Future.Suggest a completion for the following Java code.",
+"instances":
+[{"input":import java.util.concurrent.*;
+
+public class ConcurrentExample {
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+        Future<Integer> future = executor.submit(() -> {
+            TimeUnit.SECONDS.sleep(2);
+            return 42;
+        });
+"output":import java.util.concurrent.*;
+
+public class ConcurrentExample {
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+        Future<Integer> future = executor.submit(() -> {
+            TimeUnit.SECONDS.sleep(2);
+            return 42;
+        });
+
+        System.out.println("Result: " + future.get());
+        executor.shutdown();
+    }
+}
+}]
+
+
+//  (33)
+"instruction": " Implements a variadic template function to print multiple values of different types in C++Suggest a completion for the following C++ code.",
+"instances": 
+[{"input":#include <iostream>
+
+template <typename T>
+void print(const T& value) {
+    std::cout << value << std::endl;
+}
+
+template <typename T, typename... Args>
+void print(const T& first, const Args&... args) {
+    std::cout << first << " ";
+    print(args...);
+}
+"output":#include <iostream>
+
+template <typename T>
+void print(const T& value) {
+    std::cout << value << std::endl;
+}
+
+template <typename T, typename... Args>
+void print(const T& first, const Args&... args) {
+    std::cout << first << " ";
+    print(args...);
+}
+
+int main() {
+    print(1, "Hello", 3.14, 'A');
+    return 0;
+}
+}]
+
+
+//  (34)
+"instruction": "Illustrates the use of Promises and Async/Await in JavaScript to handle asynchronous operations.Suggest a completion for the following JavaScript code.",
+"instances": 
+[{"input":function asyncFunction(value) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (value) {
+                resolve(`Resolved: ${value}`);
+            } else {
+                reject('Rejected');
+            }
+        }, 1000);
+    });
+}
+"output":function asyncFunction(value) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (value) {
+                resolve(`Resolved: ${value}`);
+            } else {
+                reject('Rejected');
+            }
+        }, 1000);
+    });
+}
+
+async function exampleAsync() {
+    try {
+        const result = await asyncFunction('Hello');
+        console.log(result);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+exampleAsync();
+}]
+
+
+//  (35)
+"instruction": "Uses dynamic method definition in Ruby to add a method to a class at runtime.Suggest a completion for the following Ruby code.",
+"instances":
+[{"input":class MyClass
+  define_method :dynamic_method do
+    puts "This is a dynamic method."
+  end
+end
+"output":class MyClass
+  define_method :dynamic_method do
+    puts "This is a dynamic method."
+  end
+end
+
+obj = MyClass.new
+obj.dynamic_method
+}]
+
+
+//  (36)
+"instruction": "Implements a generic function in Swift to swap the values of two variables.Suggest a completion for the following Swift code.",
+"instances": 
+[{"input":func swapTwoValues<T>(_ a: inout T, _ b: inout T) {
+    let temporaryA = a
+    a = b
+    b = temporaryA
+}
+"output":func swapTwoValues<T>(_ a: inout T, _ b: inout T) {
+    let temporaryA = a
+    a = b
+    b = temporaryA
+}
+
+var x = 5, y = 10
+swapTwoValues(&x, &y)
+print("Swapped values: \(x), \(y)")
+}]
+
+
+//  (37)
+"instruction": " Demonstrates the usage of Kotlin coroutines to asynchronously print "Hello, " and "World!" with a delay.Suggest a completion for the following Kotlin  code.",
+"instances":
+[{"input":import kotlinx.coroutines.*
+
+fun main() = runBlocking {
+    val job = launch {
+        delay(1000)
+        println("World!")
+    }
+"output":import kotlinx.coroutines.*
+
+fun main() = runBlocking {
+    val job = launch {
+        delay(1000)
+        println("World!")
+    }
+    print("Hello, ")
+    job.join()
+}
+}]
+
+
+//  (38)
+"instruction": "Utilizes Go channels to perform a non-blocking select operation, printing either a received message or a timeout message.Suggest a completion for the following GO code.",
+"instances": 
+[{"input":package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	ch := make(chan string)
+
+	go func() {
+		time.Sleep(2 * time.Second)
+		ch <- "Hello, Go!"
+	}()
+"output":package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	ch := make(chan string)
+
+	go func() {
+		time.Sleep(2 * time.Second)
+		ch <- "Hello, Go!"
+	}()
+
+	select {
+	case msg := <-ch:
+		fmt.Println(msg)
+	case <-time.After(1 * time.Second):
+		fmt.Println("Timeout")
+	}
+}
+}]
+
+
+//  (39)
+"instruction": "Defines a type combining properties from two interfaces using mapped types in TypeScript.Suggest a completion for the following TypeScript  code.",
+"instances": 
+[{"input":type Combine<T, U> = {
+    [K in keyof T]: K extends keyof U ? U[K] : T[K];
+};
+
+interface Person {
+    name: string;
+    age: number;
+}
+"output":type Combine<T, U> = {
+    [K in keyof T]: K extends keyof U ? U[K] : T[K];
+};
+
+interface Person {
+    name: string;
+    age: number;
+}
+
+interface Address {
+    city: string;
+}
+
+const combined: Combine<Person, Address> = {
+    name: "John",
+    age: 30,
+    city: "New York",
+};
+}]
+
+
+//  (40)
+"instruction": "Demonstrates Rust's ownership and borrowing system with a struct that borrows a string and prints its value.Suggest a completion for the following Rust code.",
+"instances":
+[{"input":struct MyStruct<'a> {
+    value: &'a str,
+}
+
+impl<'a> MyStruct<'a> {
+    fn new(value: &'a str) -> MyStruct<'a> {
+        MyStruct { value }
+    }
+
+    fn print_value(&self) {
+        println!("{}", self.value);
+    }
+}
+"output":struct MyStruct<'a> {
+    value: &'a str,
+}
+
+impl<'a> MyStruct<'a> {
+    fn new(value: &'a str) -> MyStruct<'a> {
+        MyStruct { value }
+    }
+
+    fn print_value(&self) {
+        println!("{}", self.value);
+    }
+}
+
+fn main() {
+    let s = String::from("Hello, Rust!");
+    let my_struct = MyStruct::new(&s);
+    my_struct.print_value();
+}
+}]
+
+
+
+//  (41)
+"instruction": "Performs matrix operations in MATLAB, creating a magic square, squaring it, and displaying the result.",
+"instances":
+[{"input":A = magic(3);
+"output":A = magic(3); B = A^2; disp(B);
+}]
+
+
+
+//  (42)
+"instruction": "Applies a function to each element of a vector in R, calculating and printing the squares.Suggest a completion for the following R code.",
+"instances": 
+[{"input":numbers <- 1:10;
+"output":numbers <- 1:10; squares <- sapply(numbers, function(x) x^2); print(squares);
+}]
+
+
+//  (43)
+"instruction": "Uses pattern matching in Scala to determine if a string is "orange" and prints the corresponding result.Suggest a completion for the following Scala  code.",
+"instances": 
+[{"input":val result = "apple" match
+"output":val result = "apple" match { case "orange" => "fruit"; case _ => "unknown" }; println(result)
+}]
+
+
+//  (44)
+"instruction": In a Bash script, renames all text files in the current directory by changing the extension to ".bak".
+"instances": 
+[{"input":for file in *.txt;
+"output":for file in *.txt; do mv "$file" "${file%.txt}.bak"; done
+}]
+
+
+//  (45)
+"instruction": "Illustrates object inheritance in PHP, creating a base class and a derived class with overridden method.Suggest a completion for the following  PHP code.",
+"instances": 
+[{"input":class Animal { public function speak() { echo "Generic Animal Sound\n"; } }
+class Dog extends Animal
+"output":class Animal { public function speak() { echo "Generic Animal Sound\n"; } }
+class Dog extends Animal { public function speak() { echo "Bark Bark!\n"; } }
+$dog = new Dog(); $dog->speak();
+}]
+
+
+//  (46)
+"instruction": "Utilizes multiple dispatch in Julia, defining a function with different behavior based on the argument type.Suggest a completion for the following Julia code.",
+"instances": 
+[{"input":function greet(name::String)
+"output":function greet(name::String) println("Hello, $name!") end; greet("Julia")
+}]
+
+
+//  (47)
+"instruction": "In Groovy, constructs a domain-specific language (DSL) script to define and print a person's details.Suggest a completion for the following Groovy  code.",
+"instances": 
+[{"input":def person = [:];
+"output":def person = [:]; person.with { name = "John"; age = 30; }; println("Name: ${person.name}, Age: ${person.age}")
+}]
+
+
+//  (48)
+"instruction": "Demonstrates asynchronous programming in Dart, delaying the execution of a function using Future and async/await.Suggest a completion for the following Dart  code.",
+"instances":
+[{"input":Future<void> printDelayed(String message) async {
+  await Future.delayed(Duration(seconds: 2));
+  print(message);
+}
+"output":Future<void> printDelayed(String message) async {
+  await Future.delayed(Duration(seconds: 2));
+  print(message);
+}
+void main() { printDelayed("Delayed Hello!"); }
+}]
+
+
+//  (49)
+"instruction": "Creates a 3x3 matrix in Fortran using an array constructor and prints its values.Suggest a completion for the following Fortran code.",
+"instances":
+[{"input":real, dimension(3,3) ::
+"output":real, dimension(3,3) :: matrix = reshape([(i, i=1,9)], [3,3])
+write(*,*) matrix
+}]
+
+
+//  (50)
+"instruction": "Defines a simple "Hello, World!" program in COBOL, a structured and procedural programming language.Suggest a completion for the following COBOL code.",
+"instances":
+[{"input":IDENTIFICATION DIVISION.
+PROGRAM-ID. HelloWorld.
+PROCEDURE DIVISION.
+"output":IDENTIFICATION DIVISION.
+PROGRAM-ID. HelloWorld.
+PROCEDURE DIVISION.
+    DISPLAY "Hello, World!".
+    STOP RUN.
+}]
